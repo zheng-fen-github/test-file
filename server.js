@@ -30,4 +30,14 @@ app.get("/", (req, res) => {
 
 // this is a zhushi
 
+app.put("/nice", (req, res) => {
+  console.log(req);
+});
+
+app.get("/", (req, res) => {
+  //    console.log(req.params,id +'.jpg');
+  console.log(path.join(__dirname, "/store"));
+  res.sendFile(path.join(__dirname, "/store", "like (2).jpg"));
+});
+
 app.listen(4040, console.log("server is 4040"));
